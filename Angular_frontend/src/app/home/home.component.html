@@ -1,0 +1,19 @@
+<h5><span class="glyphicon glyphicon-search"></span> Search</h5>
+<form  (submit)="search()">
+  <div class="form-group">
+      <input type="text" [(ngModel)]="searchStr" name = "searchStr" (keyup)="searchStudent()" class="form-control" placeholder="Search for a student...">
+  </div>
+
+</form>
+
+<div *ngIf="searcRes">
+         <div *ngFor = "let item of searcRes">
+                <div class="row"> 
+                        <div class="col-md-12">
+                            <div class="search-res well">
+                          <a routerLink="students/{{item['id']}}"><h4> {{item['first_name']}}  {{item['last_name']}} </h4> </a>
+                            </div>
+                        </div>
+                </div>
+         </div>
+</div>

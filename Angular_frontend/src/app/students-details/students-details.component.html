@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><span class="glyphicon glyphicon-info-sign"></span> Students Info </div>
+  
+
+    <!-- Table -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+          <th>Tel Number</th>
+          <th>In Group</th>
+          <th>Creation Date</th>
+        </tr>
+      </thead>
+          
+            <tbody>
+             
+              <tr *ngFor = "let item of students_data">
+                <td><span>{{item['first_name']}}</span></td>
+                <td><span>{{item['last_name']}}</span></td>
+                <td><span>{{item['email']}}</span></td>
+                <td><span>{{item['tel_number']}}</span></td>
+                <td><span>{{item['in_group']}}</span></td>
+                <td><span>{{item['date_of_creation']}}</span></td>
+              </tr>
+            </tbody>
+            
+          
+
+
+    </table>
+    
+       <a routerLink="edit/{{item['id']}}"><div class="pull-right"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span> Edit</button></div></a>
+   
+
+</div>

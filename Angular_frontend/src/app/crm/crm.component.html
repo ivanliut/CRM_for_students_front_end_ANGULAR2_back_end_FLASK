@@ -1,0 +1,9 @@
+<h3>Todo List</h3>
+
+<ul>
+  <li *ngFor = "let item of students_data">
+   <a href="students/{{item['id']}}"> {{item['first_name']}}  {{item['last_name']}}</a> <button (click)="deleteTodo(item)">x</button>
+  </li>
+</ul>
+
+<h1>{{student_created_server_response}}</h1>
