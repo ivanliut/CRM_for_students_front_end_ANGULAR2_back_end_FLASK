@@ -5,8 +5,8 @@ from flask.ext.mysqldb import MySQL
 
 app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'sql11.freemysqlhosting.net'
-app.config['MYSQL_USER'] = 'sql11173286'
-app.config['MYSQL_PASSWORD'] = '8zEsFiNqum'
+app.config['MYSQL_USER'] = 'username'
+app.config['MYSQL_PASSWORD'] = 'password'
 app.config['MYSQL_DB'] = 'sql11173286'
 mysql = MySQL(app)
 
